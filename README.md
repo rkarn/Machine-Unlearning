@@ -9,6 +9,8 @@ In machine unlearning, when the samples of forget classes are fed to the model a
 
 Overall, the behavior of the model when samples of forget classes are fed to it after the unlearning process depends on various factors, including the specific unlearning technique used, the model architecture, and how the model is designed to handle forget classes. It's important to carefully design and evaluate the unlearning process to ensure appropriate handling of forget classes and to maintain the model's performance over time.
 
+**In this work, the label `0` has been assigned for forget class samples if it is fed to the model.**
+
 
 
 
