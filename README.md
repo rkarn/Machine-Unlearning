@@ -1,5 +1,19 @@
 # Machine Unlearning on Decision Tree for MNIST
 
+Machine unlearning, particularly for decision trees, refers to the process of removing or updating the knowledge related to specific classes or instances from a trained model. However, traditional decision tree algorithms typically do not support direct unlearning mechanisms like some other machine learning algorithms do.
+
+One approach to achieve unlearning with decision trees involves retraining the model on the remaining data after removing the instances corresponding to the forget classes. However, this method may not be very efficient or practical, especially for large datasets or complex models, as it requires significant computational resources to retrain the model from scratch.
+
+Alternatively, you can implement custom unlearning mechanisms by modifying the decision tree model directly. For example, you can adjust the decision thresholds, prune the tree to remove specific branches, or incorporate forgetting mechanisms into the learning algorithm.
+
+It's important to note that unlearning in machine learning is still an active area of research, and there isn't a one-size-fits-all solution for every scenario. 
+
+**So in this work, the modification of the tree to remove the branches corresponding to the forget class is adopted.**
+
+**In the jupyternotebook, the first part show difficulty in pruning the nodes/branch. So an alternate mechansim is adopted where a chain of if\else statements are added.**
+
+
+
 In machine unlearning, when the samples of forget classes are fed to the model after the unlearning process, the behavior of the model can vary depending on the specific unlearning technique employed and how the model is designed to handle such cases. Here are some possible scenarios:
 
 - Model Outputs Invalid Predictions: If the unlearning process removes the knowledge related to the forget classes entirely from the model, then when samples of forget classes are fed to the model, it might output invalid predictions or predictions unrelated to any known class. This is because the model no longer has the ability to recognize or classify samples from the forget classes.
