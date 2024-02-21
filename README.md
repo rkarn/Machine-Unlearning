@@ -28,4 +28,5 @@ Overall, the behavior of the model when samples of forget classes are fed to it 
 
 
 ## 2. Neural Network: 
+It is in the "Unlearning Neural Network.ipynb" file. For progressive learning, it is in process.
 
