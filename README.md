@@ -34,7 +34,7 @@ Zeroing out the weights only in the output layer is a simplistic approach and ma
 
 One way to achieve this is by fine-tuning the model using a modified loss function or regularization technique that penalizes the model for predicting the forgotten class. However, this process would involve retraining the model to some extent, which should be avoided.
 
-Another approach is to directly manipulate the weights in all layers of the network to minimize the influence of the forgotten class. This could be done through various techniques, such as weight pruning, where weights corresponding to the forgotten class are set to zero or reduced in magnitude. However, implementing such techniques manually would be complex and may not guarantee optimal performance.
+Another approach is to directly manipulate the weights in all layers of the network to minimize the influence of the forgotten class. This could be done through various techniques, such as weight pruning, where weights corresponding to the forgotten class are set to zero or reduced in magnitude. However, implementing such techniques manually would be complex and may not guarantee optimal performance.  `We use this method in out implementation.`
 
 Ultimately, completely removing the influence of a forgotten class without retraining the model is a challenging problem and may not have a straightforward solution. Depending on the specific requirements and constraints of your application, you may need to balance the trade-offs between computational complexity, model performance, and the desired level of forgetting.
 
