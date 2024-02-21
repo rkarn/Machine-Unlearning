@@ -32,7 +32,7 @@ It is in the "Unlearning Neural Network.ipynb" file.
 
 Zeroing out the weights only in the output layer is a simplistic approach and may not fully remove the influence of the forgotten class from the model. A more comprehensive approach would involve adjusting the weights in all layers of the network to mitigate the impact of the forgotten class. 
 
-One way to achieve this is by fine-tuning the model using a modified loss function or regularization technique that penalizes the model for predicting the forgotten class. However, this process would involve retraining the model to some extent, which you expressed a desire to avoid.
+One way to achieve this is by fine-tuning the model using a modified loss function or regularization technique that penalizes the model for predicting the forgotten class. However, this process would involve retraining the model to some extent, which should be avoided.
 
 Another approach is to directly manipulate the weights in all layers of the network to minimize the influence of the forgotten class. This could be done through various techniques, such as weight pruning, where weights corresponding to the forgotten class are set to zero or reduced in magnitude. However, implementing such techniques manually would be complex and may not guarantee optimal performance.
 
