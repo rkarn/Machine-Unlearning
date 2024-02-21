@@ -1,7 +1,8 @@
-# Machine Unlearning on Decision Tree for MNIST
+# Machine Unlearning for MNIST
 
-Machine unlearning, particularly for decision trees, refers to the process of removing or updating the knowledge related to specific classes or instances from a trained model. However, traditional decision tree algorithms typically do not support direct unlearning mechanisms like some other machine learning algorithms do.
+Machine unlearning refers to the process of removing or updating the knowledge related to specific classes or instances from a trained model. 
 
+## 1. Decision Tree:
 One approach to achieve unlearning with decision trees involves retraining the model on the remaining data after removing the instances corresponding to the forget classes. However, this method may not be very efficient or practical, especially for large datasets or complex models, as it requires significant computational resources to retrain the model from scratch.
 
 Alternatively, you can implement custom unlearning mechanisms by modifying the decision tree model directly. For example, you can adjust the decision thresholds, prune the tree to remove specific branches, or incorporate forgetting mechanisms into the learning algorithm.
@@ -26,5 +27,5 @@ Overall, the behavior of the model when samples of forget classes are fed to it 
 **In this work, the label `0` has been assigned for forget class samples if it is fed to the model.**
 
 
-
+## 2. Neural Network: 
 
