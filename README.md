@@ -39,5 +39,5 @@ Another approach is to directly manipulate the weights in all layers of the netw
 Ultimately, completely removing the influence of a forgotten class without retraining the model is a challenging problem and may not have a straightforward solution. Depending on the specific requirements and constraints of your application, you may need to balance the trade-offs between computational complexity, model performance, and the desired level of forgetting.
 
 
-**For progressive learning, it is in process.**
+**For progressive learning, it is showin in `Unlearning_ProgressiveLearning_MNIST.ipynb` where  task is forgetted.**
 
