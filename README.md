@@ -1,6 +1,6 @@
 # Machine Unlearning for MNIST
 
-Machine unlearning typically refers to the process of removing or forgetting information associated with a specific class or subset of data from a machine learning model. This can involve forgetting a type of class entirely, removing samples belonging to a particular class, or adjusting the model's parameters to reduce the influence of specific classes or samples.
+Machine unlearning typically refers to the process of removing or forgetting information associated with a specific class or subset of data from a machine learning model. This can involve forgetting `a type of class entirely`, `removing samples` belonging to a particular class, or adjusting the model's parameters `to reduce the influence of specific classes or samples`.
 
 ## 1. Decision Tree:
 One approach to achieve unlearning with decision trees involves retraining the model on the remaining data after removing the instances corresponding to the forget classes. However, this method may not be very efficient or practical, especially for large datasets or complex models, as it requires significant computational resources to retrain the model from scratch.
