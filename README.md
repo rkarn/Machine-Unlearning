@@ -1,19 +1,6 @@
-# Machine Unlearning for MNIST
+# Machine Unlearning for Neural Network
 
 Machine unlearning typically refers to the process of removing or forgetting information associated with a specific class or subset of data from a machine learning model. This can involve forgetting `a type of class entirely`, `removing samples` belonging to a particular class, or adjusting the model's parameters `to reduce the influence of specific classes or samples`.
-
-## 1. Decision Tree:
-One approach to achieve unlearning with decision trees involves retraining the model on the remaining data after removing the instances corresponding to the forget classes. However, this method may not be very efficient or practical, especially for large datasets or complex models, as it requires significant computational resources to retrain the model from scratch.
-
-Alternatively, you can implement custom unlearning mechanisms by modifying the decision tree model directly. For example, you can adjust the decision thresholds, prune the tree to remove specific branches, or incorporate forgetting mechanisms into the learning algorithm.
-
-It's important to note that unlearning in machine learning is still an active area of research, and there isn't a one-size-fits-all solution for every scenario. 
-
-**So in this work, the modification of the tree to remove the branches corresponding to the forget class is adopted.**
-
-**In the jupyternotebook, the first part show difficulty in pruning the nodes/branch. So an alternate mechansim is adopted where a chain of if\else statements are added.**
-
-
 
 In machine unlearning, when the samples of forget classes are fed to the model after the unlearning process, the behavior of the model can vary depending on the specific unlearning technique employed and how the model is designed to handle such cases. Here are some possible scenarios:
 
@@ -27,7 +14,7 @@ Overall, the behavior of the model when samples of forget classes are fed to it 
 **In this work, the label `0` has been assigned for forget class samples if it is fed to the model.**
 
 
-## 2. Neural Network: 
+## 1. Neural Network in General: 
 It is in the "Unlearning Neural Network.ipynb" file. 
 
 Zeroing out the weights only in the output layer is a simplistic approach and may not fully remove the influence of the forgotten class from the model. A more comprehensive approach would involve adjusting the weights in all layers of the network to mitigate the impact of the forgotten class. 
@@ -38,7 +25,8 @@ Another approach is to directly manipulate the weights in all layers of the netw
 
 Ultimately, completely removing the influence of a forgotten class without retraining the model is a challenging problem and may not have a straightforward solution. Depending on the specific requirements and constraints of your application, you may need to balance the trade-offs between computational complexity, model performance, and the desired level of forgetting.
 
+## 2. Progressive Learning:
 
-**For progressive learning, it is showin in `Unlearning_ProgressiveLearning_MNIST.ipynb` and `Unlearning_ProgressiveLearning_MNIST_Randomization.ipynb` where task is forgetted for dynamic neural architecture. For the static architecture, synaptic intelligence mechanism is used. In notebooks `MNIST_unlearning_SynapticIntelligence.ipynb` and `Unlearning_ProgressiveLearning_MNIST.ipynb` the forget weights are zeroed out while in notebooks `MNIST_unlearning_SynapticIntelligence_Randomization.ipynb` and `Unlearning_ProgressiveLearning_MNIST_Randomization.ipynb` the forget weights are assigned with random numbers.`**
+For progressive learning, it is showin in `Unlearning_ProgressiveLearning_MNIST.ipynb` and `Unlearning_ProgressiveLearning_MNIST_Randomization.ipynb` where task is forgetted for dynamic neural architecture. For the static architecture, synaptic intelligence mechanism is used. In notebooks `MNIST_unlearning_SynapticIntelligence.ipynb` and `Unlearning_ProgressiveLearning_MNIST.ipynb` the forget weights are zeroed out while in notebooks `MNIST_unlearning_SynapticIntelligence_Randomization.ipynb` and `Unlearning_ProgressiveLearning_MNIST_Randomization.ipynb` the forget weights are assigned with random numbers.`
 
 
