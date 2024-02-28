@@ -39,5 +39,6 @@ Another approach is to directly manipulate the weights in all layers of the netw
 Ultimately, completely removing the influence of a forgotten class without retraining the model is a challenging problem and may not have a straightforward solution. Depending on the specific requirements and constraints of your application, you may need to balance the trade-offs between computational complexity, model performance, and the desired level of forgetting.
 
 
-**For progressive learning, it is showin in `Unlearning_ProgressiveLearning_MNIST.ipynb` where  task is forgetted.**
+**For progressive learning, it is showin in `Unlearning_ProgressiveLearning_MNIST.ipynb` where  task is forgetted for dynamic neural architecture. For the static architecture, synaptic intelligence mechanism is used. In notebook `MNIST_unlearning_SynapticIntelligence.ipynb` the forget weights are zeroed out while in notebook `MNIST_unlearning_SynapticIntelligence_Randomization.ipynb the forget weights are assigned with random numbers.`**
+
 
