@@ -1,4 +1,5 @@
 # Machine Unlearning for Neural Network
+**Because of the paper space constraints, we have put together the comparision with related work and future work sections at the bottom of this page.**
 
 Machine unlearning typically refers to the process of removing or forgetting information associated with a specific class or subset of data from a machine learning model. This can involve forgetting `a type of class entirely`, `removing samples` belonging to a particular class, or adjusting the model's parameters `to reduce the influence of specific classes or samples`.
 
@@ -38,6 +39,50 @@ The scrubbing procedure described in \cite{golatkar2020eternal} involves removin
 
 In \cite{golatkar2021mixed}, a trace is generated for the standard neural network, providing a linear approximation of the extent of weight changes resulting from learning specific subsets of training data. In our study, we extend this concept to apply unlearning in TPL.
 We re-use the importance metrics ($\Omega$) derived during the training process of TPL, eliminating the need for additional metric creation specifically for unlearning purposes.
+
+@inproceedings{shibata2021learning,
+  title={Learning with Selective Forgetting.},
+  author={Shibata, Takashi and Irie, Go and Ikami, Daiki and Mitsuzumi, Yu},
+  booktitle={IJCAI},
+  volume={3},
+  pages={4},
+  year={2021}
+}
+
+@inproceedings{cao2015towards,
+  title={Towards making systems forget with machine unlearning},
+  author={Cao, Yinzhi and Yang, Junfeng},
+  booktitle={2015 IEEE symposium on security and privacy},
+  pages={463--480},
+  year={2015},
+  organization={IEEE}
+}
+
+@inproceedings{shibata2021learning,
+  title={Learning with Selective Forgetting.},
+  author={Shibata, Takashi and Irie, Go and Ikami, Daiki and Mitsuzumi, Yu},
+  booktitle={IJCAI},
+  volume={3},
+  pages={4},
+  year={2021}
+}
+
+
+@inproceedings{golatkar2020eternal,
+  title={Eternal sunshine of the spotless net: Selective forgetting in deep networks},
+  author={Golatkar, Aditya and Achille, Alessandro and Soatto, Stefano},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9304--9312},
+  year={2020}
+}
+
+@inproceedings{golatkar2021mixed,
+  title={Mixed-privacy forgetting in deep networks},
+  author={Golatkar, Aditya and Achille, Alessandro and Ravichandran, Avinash and Polito, Marzia and Soatto, Stefano},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={792--801},
+  year={2021}
+}
 
 # Future Work:
 Investigating partial unlearning for tasks within progressive learning presents a promising avenue for future research. Instead of completely unlearning a task, the focus would be on selectively forgetting specific patterns within a subset of classes. We have demonstrated the unlearning mechanism within a FF-FC-NN architecture. It remains to be explored how this mechanism may evolve when applied to convolutional, recurrent, and graph neural network architectures within a progressive learning framework.
